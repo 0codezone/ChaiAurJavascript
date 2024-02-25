@@ -81,7 +81,26 @@ var date = new Date();
 console.log(typeof date);  // "object"
 
 
+// ----------------------------------------------------------------
+// ##stack(primitve datatypes) and heap(non-primitive)Memory in javascript
+// 1) jb bh stack memory use hoti to uska matlb jb bhi apne variable declare kia uska apko copy milta h
+// 2) or jb bhi heap memory use hoti h to apko original value ka refrence milta h
 
+// example 
+// let myYotubeName = "0codeZone"
+// let anotherName = myYotubeName;
 
+// anotherName = "chaiorcode"
+// console.log(myYotubeName);  // codeZone
+// console.log(anotherName);  //  chaiorcode => ye change hua kyuki myyoutube original value nhi dia tha COPY dia tha 
 
+let userOne = {   // now this is non-primitive so heap me jayega 
+    email : "user@gmail.com",
+    upi : "user@ybl"
+}
+let userTwo = userOne;
 
+userTwo.email = "user2@gmail.com"
+
+console.log(userOne); //{email : "user2@gmail.com"}  //it is bcox heap memory
+console.log(userTwo); //{email : "user2@gmail.com"}  
