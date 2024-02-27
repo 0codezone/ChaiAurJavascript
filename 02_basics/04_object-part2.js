@@ -61,8 +61,48 @@ const users = [
 
 // console.log(Object.keys(tinderUser)); // gives keys of object in ARRAY form
 // console.log(Object.values(tinderUser)); 
-console.log(Object.entries(tinderUser));  //elemnt ko array me badal kr ek array bag me bhr deta h
+// console.log(Object.entries(tinderUser));  //elemnt ko array me badal kr ek array bag me bhr deta h
+
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ---------------------------------++++ Destructuring ++++---------------------------------------
+
+const course = {
+    c_name : "javascript",
+    c_price : 30,
+    c_teacger : "hitesh sir",
+    institute : "ChaiAurCode"
+}
+
+const {c_name, c_price, c_teacger, institute} = course;
+
+console.log(c_name);
+console.log(c_price);
+console.log(c_teacger);
+console.log(institute);
 
 
+// --------------------json api--------------
+// {
+//     "name" : "mohit",
+//     "age" : 22
+// }
+
+// or  
+
+// [
+//     {},
+//     {},
+//     {
+//         [
+//             {},
+//             {},
+//         ]
+//     },
+//     {},
+//     {}
+// ]
 
 
+//source : randomuser me api, 
+//         json formater
