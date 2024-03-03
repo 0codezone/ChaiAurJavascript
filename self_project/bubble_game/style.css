@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Courier New', Courier, monospace   ;
+    width: 100%;
+    height: 100%;
+}
+
+#main { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(100, 228, 100);
+}
+
+#panel{
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#ptop{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(50, 100, 50);
+}
+
+.element{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+   width: 15%;
+}
+.element h2{ 
+   color: #fff;
+   font-weight: 500;
+}
+
+.box{
+    text-align: center;
+    font-size: 22px;
+    width: 50px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(50, 100, 50);
+    font-weight: 600;
+}
+
+#startBtn{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: rgb(50, 100, 50);
+    background-color: rgb(100, 228, 100);
+    
+}
+#startBtn:hover{
+    box-shadow: inset 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+#pbottom{
+    /* background-color: purple; */
+    width: 100%;
+    height: calc(100% - 100px);
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bubble{
+    cursor: pointer;
+    box-shadow: inset -8px -8px 12px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(47, 136, 47, 0.918);
+}
+
+/* -----------game-over */
+#game-over{
+    width: 100%;
+    height: 100% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: url("https://images.unsplash.com/photo-1514827806932-41f3256867af?q=80&w=1584&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    filter: invert(1);    
+}
+#game-over p{
+   font-size: 25px;
+   font-weight: bold;
+
+}
