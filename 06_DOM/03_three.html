@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM NodeList ... important</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // document.body.innerHTML = `<div></div>`   // X false
+
+        const div = document.createElement('div')
+        div.className = "main"
+        // div.id = "mainId"
+        div.id = Math.floor((Math.random() * 10) + 1)
+        div.setAttribute("title", "generatedTitle")
+        div.style.height = "100px"
+        div.style.width = "100px"
+        div.style.padding = "10px"
+        div.style.backgroundColor = "green"
+
+        // div.innerText = "Chai aur Code"
+        const addText = document.createTextNode("Chai Aur Code")
+        div.appendChild(addText)
+
+
+        document.body.appendChild(div)   // ye imporatant h meomery se documnet me dikhane k liye 
+        
+    </script>
+</body>
+</html>
