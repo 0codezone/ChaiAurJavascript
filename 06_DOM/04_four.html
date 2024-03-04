@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn DOM | Edit and Remove Element in DOM</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: white;
+    }
+</style>
+<body>
+    <ul class="languages">
+        <li>Javascript</li>
+        <li>Java</li>
+    </ul>
+
+
+    <script>
+        // function addLanguage(lName) {
+        //    let li =  document.createElement('li')
+        //    li.innerText = lName
+        //    let languages = document.querySelector('.languages')
+        //    languages.appendChild(li)
+
+        //    console.log(languages);
+        // }
+        // addLanguage("Pyhton")
+        // addLanguage("Go")
+
+
+        // //or
+        // let Array = ["Rust", "Cpp", "PHP" ]
+        // Array.map((lName)=>{
+        //     addLanguage(lName)
+        // })
+
+    </script>
+
+    <script>
+        //optimised code for above add-language
+        function optimisedAddLanguage(Lname){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(Lname))
+            document.querySelector('.languages').appendChild(li)
+        }
+        optimisedAddLanguage("Python")
+        optimisedAddLanguage("Golang")
+
+        // // -----------------------------------
+        // //Editing replcae or chanege Existing 
+        // const selectLang1 =  document.querySelector("li:nth-child(2)")
+        // // selectLang1.innerHTML = "MOJO"
+        // const newLi = document.createElement("li")
+        // newLi.textContent = "MOJO"
+        // selectLang1.replaceWith(newLi)
+        
+        // //Editing
+        // const selectLang2 =  document.querySelector("li:first-child")
+        //  const newLi =  selectLang2.outerHTML = "<li>TYPESCRIPT</li>"
+        // selectLang2.replaceWith(newLi)
+
+        //Editing
+        // const selectLang2 =  document.querySelector("li:first-child")
+        //  const newLi =  selectLang2.innerHTML = "TYPESCRIPT"
+        // selectLang2.replaceWith(newLi)
+
+        // \\-------------------------------------------REMOVE
+        const selectLang1 =  document.querySelector("li:nth-child(2)")
+        selectLang1.remove()  // remove java from list
+     
+
+    </script>
+</body>
+</html>
