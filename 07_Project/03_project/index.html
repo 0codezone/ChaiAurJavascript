@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            background: #212121;
+            color: white;
+            overflow: hidden;
+        }
+
+        .clock{
+            padding: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            font-size: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: inset 3px 3px 30px 6px black, 5px 5px 10px 0px black;
+            border-radius: 10px;
+        }
+        .clock{
+            padding: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            font-size: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: inset 3px 3px 30px 6px black, 5px 5px 10px 0px black;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="clock" class="clock"></div>
+    <div id="clock2" class="clock"></div>
+
+    <script>
+        const clockElement = document.getElementById("clock");
+
+        function updateClock() {
+            const currentTime = new Date();
+            const formattedTime = currentTime.toLocaleTimeString();
+            clockElement.textContent = formattedTime;
+        }
+
+        // Update the clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+    <!-- ---------------------------- -->
+     <script>
+        let clockElement2 = document.getElementById("clock2");
+        
+        function updateClock2() {
+            const currentTime = new Date();
+            const hours = currentTime.getHours().toString().padStart(2, '0');
+            const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+            const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+           
+            clockElement2.innerHTML =    `
+           
+                <span id = "hour">${hours}</span> : 
+                <span id = "min">${minutes}</span> : 
+                <span id = "sec">${seconds}</span>
+            `
+        }
+
+        updateClock2();
+        setInterval(updateClock2, 1000);
+    </script>
+    <script>
+
+    </script>
+</body>
+</html>
