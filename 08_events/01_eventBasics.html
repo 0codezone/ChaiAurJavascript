@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: antiquewhite;
+        }
+        a{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body >
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoSjop" src="https://cdn.pixabay.com/photo/2017/03/27/13/55/controller-2178879_960_720.jpg" alt="/"></li>
+            <li><img width="200px" id="japan" src="https://cdn.pixabay.com/photo/2021/03/02/13/04/laptop-6062423_1280.jpg" alt="/"></li>
+            <li><img width="200px" id="river" src="https://cdn.pixabay.com/photo/2017/03/27/13/55/controller-2178879_960_720.jpg" alt="/"></li>
+            <li><img width="200px" id="owl" src="https://cdn.pixabay.com/photo/2021/03/02/13/04/laptop-6062423_1280.jpg" alt="/"></li>
+            <li><img width="200px" id="prayer" src="https://cdn.pixabay.com/photo/2017/03/27/13/55/controller-2178879_960_720.jpg" alt="/"></li>
+         <li><a id="google" href="https://www.google.com">Google</a></li>
+        </ul>
+    </div>
+
+    <script>
+
+        //event propagation - by default - bubbling (false)
+        // document.getElementById('images').addEventListener('click', (e)=>{
+        //     console.log("clcicked insde the ul");
+        // })
+        // document.getElementById('owl').addEventListener('click', (e)=>{
+        //     console.log("owl click");
+        // })
+
+        //capturing - (true)
+        // document.getElementById('images').addEventListener('click', (e)=>{
+        //     console.log("clcicked insde the ul");
+        // }, true)
+        // document.getElementById('owl').addEventListener('click', (e)=>{
+        //     console.log("owl click");
+        // }, true)
+
+
+        // stopPropagation -you can handle propagation to work or not
+        // document.getElementById('images').addEventListener('click', (e)=>{
+        //     console.log("clcicked insde the ul");
+        // }, true)
+        // document.getElementById('owl').addEventListener('click', (e)=>{
+        //     e.stopPropagation
+        // }, true)
+
+        // // prevent default
+        // document.getElementById('google').addEventListener('click', (e)=>{
+        //     console.log("clcicked google");
+        //     e.preventDefault()   //redirect krne se rok dega
+        // })
+    </script>
+    <script>
+        document.querySelector("#images").addEventListener('click',(e)=>{
+            console.log(e.target);
+            console.log(e.target.parentNode);
+            if (e.target.tagName === 'IMG') {   //img ka prent hi delete hoga baki ki pe click kia to uska parent ni hoga
+                console.log(e.target.id);
+                const remove = e.target.parentNode;
+                remove.remove();
+            }
+        })
+    </script>
+</body>
+</html>
