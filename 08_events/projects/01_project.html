@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settimeout setIteraval</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>CICK START BUTTON TO CHANGE COLOR</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+    <script>
+
+    const randomColor = ()=>{
+        const hex = '0123456789ABCDEF'
+        let color  = "#"
+        for (let i = 0; i < 6; i++) {   
+            color += hex[Math.floor(Math.random()*16)]         
+        }
+        return color
+    }
+      console.log(randomColor());
+
+    //   const changingColor = setInterval(()=>{
+    //     document.body.style.backgroundColor = randomColor
+    //   },2000)
+    let colorChaingId;
+    const startChangingColor = ()=>{
+        console.log("Start changing color in every 2 sec");
+         colorChaingId = setInterval(()=>{document.body.style.backgroundColor = randomColor()}, 2000)
+    }
+    const stopChaningcolor = ()=>{
+        console.log("stop changing color");
+        clearInterval(colorChaingId)
+    }
+
+
+      document.querySelector('#start').addEventListener("click", startChangingColor)
+      document.querySelector('#stop').addEventListener("click", stopChaningcolor)
+    </script>
+</body>
+</html>
