@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body>
+
+<div id="userDetail">
+    <h1></h1>
+</div>
+
+    <!-- <script>
+    const promiseOne = new Promise((resolve, reject)=>{
+        //do async task
+        //db call , cryptoghrpy , network
+
+        setTimeout(()=>{
+            console.log("async task is compelete");
+            resolve()   // call kroge to hi then se connect hoga
+        }, 1000)
+    })
+
+    promiseOne.then(()=>{
+        console.log("promised consume");
+    })
+
+    </script> -->
+
+    <!-- <script>
+        new Promise((resolve , reject)=>{
+           setTimeout(()=>{
+            console.log("async task 2 is completed");
+            resolve()
+           }, 1000)
+        }).then(()=>{
+            console.log("promiseTwo consumed async 2 resolve");
+
+        })
+
+    </script> -->
+
+<!-- <script>
+    const promiseThree = new Promise((resolve, reject)=>{
+        //do async task
+        //db call , cryptoghrpy , network
+
+        setTimeout(()=>{
+            resolve({username : "mohit", email:"mohit@gmail.com" })   
+        }, 1000)
+    })
+
+    promiseThree.then((user)=>{
+        console.log(user);
+    })
+
+    </script> -->
+
+<!-- <script>
+    const promiseFour = new Promise((resolve, reject)=>{
+        //do async task
+        //db call , cryptoghrpy , network
+
+        setTimeout(()=>{
+           let error = false;
+           if (!error) {
+            resolve({username : "mohit"})
+           }else{
+            reject("Erorr")
+           }
+        }, 2000)
+    })
+
+    promiseFour.then((user)=>{
+        console.log(user.username);
+        return user.usename;
+    }).then((username)=>{
+        console.log(username);
+    }).catch((error)=>{
+        console.log(error);
+    })
+
+    </script> -->
+
+<!-- <script>
+    const promiseFive = new Promise((resolve, reject)=>{
+        //do async task
+        //db call , cryptoghrpy , network
+
+        setTimeout(()=>{
+           let error = true;
+           if (!error) {
+            resolve({username : "mohit"})
+           }else{
+            reject("Erorr")
+           }
+        }, 2000)
+    })
+
+     const promiseFiveConsumed = async ()=>{
+        try {
+            const res = await promiseFive
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    promiseFiveConsumed()
+
+    </script> -->
+
+
+<!-- <script>
+    const getAllUser = async ()=>{
+        const res = await fetch("https://api.github.com/users/0codezone")
+        const data = await res.json()
+        console.log(data);
+    }
+    getAllUser()
+</script> -->
+
+</body>
+</html>
